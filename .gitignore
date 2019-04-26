@@ -4,3 +4,7 @@ index.php
 CSS_Grid/
 JavaScript30/
 /html
+
+node_modules/
+.DS_Store
+haters
