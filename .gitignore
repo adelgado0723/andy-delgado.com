@@ -8,3 +8,8 @@ JavaScript30/
 node_modules/
 .DS_Store
 haters
+
+
+.vscode/
+dist/
+

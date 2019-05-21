@@ -1,0 +1,192 @@
+.banner {
+  /* color: #4fb99f; */
+  text-shadow: var(--dark-blue) 3px 3px;
+  color: var(--red);
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 3em;
+  font-weight: bold;
+  height: 40vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-image: url('../assets/images/topography.png');
+  /* background-color: var(--aqua); */
+}
+
+nav {
+  position: relative;
+  perspective: 600px;
+  /* border: 10px solid red; */
+}
+
+.cool > li > a {
+  color: #f2b134;
+  text-decoration: none;
+  font-size: 2em;
+  border: #f2b134;
+  /* background: rgba(17, 47, 65, 0.822); */
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 20px;
+  /* margin-top: var(--button-spacing); */
+  border-radius: 5px;
+  font-weight: bold;
+  /* border: 10px solid red; */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  color: #fcedeb;
+  /* border: 10px solid red; */
+}
+.cool {
+  background-color: #112f41;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  padding: 0px 5vw;
+}
+.cool > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* border: 10px solid red; */
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  /* top: -20px; */
+  border-radius: 2px;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  will-change: opacity;
+  display: none;
+
+  /* border: 10px solid red; */
+}
+
+.trigger-enter .dropdown {
+  display: block;
+  /* border: 10px solid red; */
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+  /* border: 10px solid red; */
+}
+.icon {
+  width: 450px;
+  height: auto;
+  /* border: 10px solid red; */
+}
+
+.dropdownBackground {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #ed553b;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  /* border: 10px solid red; */
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+  /* border: 10px solid red; */
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #ed553b;
+  transform: translateY(-50%) rotate(45deg);
+  /* border: 10px solid red; */
+}
+
+.bio {
+  font-size: 14px;
+  /* padding-top: var(--button-spacing); */
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.7;
+  /* border: 10px solid red; */
+}
+
+.bio img {
+  float: left;
+  margin-right: 20px;
+  /* border: 10px solid red; */
+}
+
+.projects {
+  /* padding-top: var(--button-spacing); */
+  min-width: 300px;
+  /* border: 10px solid red; */
+}
+
+.projects li {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  background-color: rgba(6, 133, 135, 0.7);
+  /* border: 10px solid red; */
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #f2b134;
+
+  /* border: 10px solid red; */
+}
+
+a.button {
+  position: center;
+  background: black;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin: 10px;
+  margin-top: 20px;
+  /* border: 10px solid red; */
+}
+.dropdown3 {
+  /* padding-top: var(--button-spacing); */
+}
+/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+
+/* 
+
+.button[href*='twitter'] {
+         background: #019fe9;
+       }
+       .button[href*='facebook'] {
+         background: #3b5998;
+       } 
+*/
+.button[href*='in/adelgado0723'] {
+  background: #0077b5;
+}
+.button[href*='andy-delgado.com'] {
+  background: #f2b134;
+}
