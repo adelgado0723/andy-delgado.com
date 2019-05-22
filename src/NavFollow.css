@@ -17,12 +17,16 @@
 
 nav {
   position: relative;
-  perspective: 600px;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+
+  /* perspective: 600px; */
   /* border: 10px solid red; */
 }
 
-.cool > li > a {
-  color: #f2b134;
+.nav-links > li > a {
+  color: var(--yellow);
   text-decoration: none;
   font-size: 2em;
   border: #f2b134;
@@ -46,17 +50,18 @@ nav ul {
   color: #fcedeb;
   /* border: 10px solid red; */
 }
-.cool {
+.nav-links {
   background-color: #112f41;
   align-items: center;
   justify-content: space-around;
   display: flex;
   padding: 0px 5vw;
 }
-.cool > li {
+.nav-links > li {
   position: relative;
   display: flex;
   justify-content: center;
+  flex: 1;
   /* border: 10px solid red; */
 }
 
@@ -155,7 +160,7 @@ nav ul {
 
 .dropdown a {
   text-decoration: none;
-  color: #f2b134;
+  color: var(--yellow);
 
   /* border: 10px solid red; */
 }

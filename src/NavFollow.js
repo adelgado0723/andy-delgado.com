@@ -1,4 +1,4 @@
-const triggers = document.querySelectorAll('.cool > li');
+const triggers = document.querySelectorAll('.nav-links > li');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
 const title = document.querySelector('h1');
@@ -18,23 +18,15 @@ function handleEnter() {
   const dropdown = this.querySelector('.dropdown');
   const dropdownCoords = dropdown.getBoundingClientRect();
   const navCoords = nav.getBoundingClientRect();
-  // const titleCoords = title.getBoundingClientRect();
-  const anchor = dropdown.querySelector('a');
 
-  const marginTop = window
-    .getComputedStyle(this.querySelector('a'))
-    .getPropertyValue('margin-top');
-  const margin = parseFloat(marginTop, 10);
-
-  console.log('Margin-top' + margin);
   const coords = {
     height: dropdownCoords.height, // - margin,
     width: dropdownCoords.width,
     top: dropdownCoords.top - navCoords.top, //+ margin,
     left: dropdownCoords.left - navCoords.left,
   };
-  console.log(`Coords => ` + JSON.stringify(coords));
-  console.log(`Nav Coords => ` + JSON.stringify(navCoords));
+  // console.log(`Coords => ` + JSON.stringify(coords));
+  // console.log(`Nav Coords => ` + JSON.stringify(navCoords));
   // Setting position and size of the background div
 
   background.style.setProperty('width', `${coords.width}px`);
