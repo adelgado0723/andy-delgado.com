@@ -8,23 +8,23 @@ nav {
 li.logo {
   max-width: 0;
   overflow: hidden;
-  background: white;
   transition: all 0.5s;
   font-weight: 600;
   font-size: 30px;
+  background-color: var(--yellow);
 }
 
 li.logo a {
-  color: black;
+  color: var(--dark-blue);
 }
 
 nav a {
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-  color: white;
+  /* text-decoration: none; */
+  /* padding: 20px; */
+  /* display: inline-block; */
+  /* color: white; */
   transition: all 0.2s;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 body.fixed-nav nav {
   position: fixed;
@@ -33,14 +33,16 @@ body.fixed-nav nav {
 
 .fixed-nav li.logo {
   max-width: 500px;
+  flex: 1;
 }
 
 body.fixed-nav .site-wrap {
   transform: scale(1);
 }
+
 .site-wrap {
   max-width: 700px;
-  margin: 70px auto;
+  margin: 30px auto;
   background: white;
   padding: 40px;
   text-align: justify;

@@ -2,10 +2,12 @@
   /* color: #4fb99f; */
   text-shadow: var(--dark-blue) 3px 3px;
   color: var(--red);
-  margin-top: 0;
-  padding-top: 0;
+  /* margin-top: 0; */
+
+  /* padding-top: 0; */
   font-size: 3em;
   font-weight: bold;
+  top: 0;
   height: 40vh;
   text-align: center;
   align-items: center;
@@ -29,39 +31,42 @@ nav {
   color: var(--yellow);
   text-decoration: none;
   font-size: 2em;
-  border: #f2b134;
+  border: var(--yellow);
   /* background: rgba(17, 47, 65, 0.822); */
-  padding: 10px 20px;
+  /* padding: 5px 10px; */
   display: inline-block;
-  margin: 20px;
+  /* margin: 20px; */
   /* margin-top: var(--button-spacing); */
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-weight: bold;
   /* border: 10px solid red; */
 }
 
+.nav-links > li:hover {
+  background-color: var(--light-dark-blue);
+}
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
   /* align-items: center; */
-  color: #fcedeb;
   /* border: 10px solid red; */
 }
 .nav-links {
-  background-color: #112f41;
+  background-color: var(--dark-blue);
   align-items: center;
   justify-content: space-around;
   display: flex;
-  padding: 0px 5vw;
+  /* padding: 0px 5vw; */
 }
 .nav-links > li {
   position: relative;
   display: flex;
   justify-content: center;
   flex: 1;
+
+  border-right: 3px solid var(--gray);
   /* border: 10px solid red; */
 }
 
@@ -99,7 +104,7 @@ nav ul {
   width: 100px;
   height: 100px;
   position: absolute;
-  background: #ed553b;
+  background: var(--red);
   border-radius: 4px;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
     0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -121,7 +126,7 @@ nav ul {
   width: 20px;
   height: 20px;
   display: block;
-  background: #ed553b;
+  background: var(--red);
   transform: translateY(-50%) rotate(45deg);
   /* border: 10px solid red; */
 }
