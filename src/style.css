@@ -16,7 +16,6 @@
   --dark-green: #013440;
   --dark-green-active: #013440;
   --dark-green-hover: #036075;
-  /* --aqua: #04adbf; */
   --green: #038c7f;
   --green-active: #027267;
 }
@@ -28,17 +27,14 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
-  /* background-size: cover; */
-  /* background-position: center; */
   background-repeat: repeat;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   min-width: 100vw;
-  /* background-image: url('../assets/images/topography.png'); */
   background: var(--dark-green);
 }

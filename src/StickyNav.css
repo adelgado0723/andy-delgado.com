@@ -12,6 +12,7 @@ li.logo {
   font-weight: 600;
   font-size: 30px;
   background-color: var(--yellow);
+  border: none;
 }
 
 li.logo a {
@@ -19,12 +20,7 @@ li.logo a {
 }
 
 nav a {
-  /* text-decoration: none; */
-  /* padding: 20px; */
-  /* display: inline-block; */
-  /* color: white; */
   transition: all 0.2s;
-  /* text-transform: uppercase; */
 }
 body.fixed-nav nav {
   position: fixed;
@@ -34,6 +30,7 @@ body.fixed-nav nav {
 .fixed-nav li.logo {
   max-width: 500px;
   flex: 1;
+  border-right: 3px solid var(--gray);
 }
 
 body.fixed-nav .site-wrap {
