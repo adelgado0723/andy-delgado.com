@@ -3,6 +3,28 @@ const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
 const title = document.querySelector('h1');
 
+let topOfNav = nav.offsetTop;
+
+function fixNav() {
+  if (window.scrollY >= topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+    // document.body.classList.add('follow-off');
+
+    document.body.classList.add('fixed-nav');
+    // document.body.one('transitioned', function() {
+    //   document.body.classList.remove('follow-off');
+    // });
+  } else {
+    // document.body.classList.add('follow-off');
+    document.body.classList.remove('fixed-nav');
+    // document.body.one('transitioned', function() {
+    //   document.body.classList.remove('follow-off');
+    // });
+    document.body.style.paddingTop = 0;
+    // document.body.style.top = 0;
+  }
+}
+
 function handleEnter() {
   this.classList.add('trigger-enter');
   // Inside of setTimeout, we use an arrow function so that
@@ -48,3 +70,5 @@ triggers.forEach((trigger) =>
 triggers.forEach((trigger) =>
   trigger.addEventListener('mouseleave', handleLeave)
 );
+
+window.addEventListener('scroll', fixNav);
