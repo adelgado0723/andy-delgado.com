@@ -1,31 +1,26 @@
 const triggers = document.querySelectorAll('.nav-links > li');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
-const title = document.querySelector('h1');
+const arrow = background.querySelector('.arrow');
 
 let topOfNav = nav.offsetTop;
 
 function fixNav() {
   if (window.scrollY >= topOfNav) {
     document.body.style.paddingTop = nav.offsetHeight + 'px';
-    // document.body.classList.add('follow-off');
-
     document.body.classList.add('fixed-nav');
-    // document.body.one('transitioned', function() {
-    //   document.body.classList.remove('follow-off');
-    // });
+    // closeDropdown();
   } else {
-    // document.body.classList.add('follow-off');
     document.body.classList.remove('fixed-nav');
-    // document.body.one('transitioned', function() {
-    //   document.body.classList.remove('follow-off');
-    // });
+    // closeDropdown();
     document.body.style.paddingTop = 0;
-    // document.body.style.top = 0;
   }
 }
 
 function handleEnter() {
+  if (this.classList.contains('logo')) {
+    return;
+  }
   this.classList.add('trigger-enter');
   // Inside of setTimeout, we use an arrow function so that
   // "this" will be the same "this"as in the calling parent element
@@ -60,8 +55,28 @@ function handleEnter() {
 }
 
 function handleLeave() {
+  if (
+    this.classList.contains('logo') ||
+    document.activeElement === background
+  ) {
+    return;
+  }
   this.classList.remove('trigger-enter', 'trigger-enter-active');
   background.classList.remove('open');
+}
+
+function closeDropdown() {
+  triggers.forEach((trigger) => {
+    if (trigger.classList.contains('trigger-enter')) {
+      trigger.classList.remove('trigger-enter');
+    }
+    if (trigger.classList.contains('trigger-enter-active')) {
+      trigger.classList.remove('trigger-enter-active');
+    }
+    if (trigger.classList.contains('open')) {
+      trigger.classList.remove('open');
+    }
+  });
 }
 
 triggers.forEach((trigger) =>
@@ -70,5 +85,4 @@ triggers.forEach((trigger) =>
 triggers.forEach((trigger) =>
   trigger.addEventListener('mouseleave', handleLeave)
 );
-
 window.addEventListener('scroll', fixNav);
