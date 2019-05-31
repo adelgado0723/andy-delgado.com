@@ -55,10 +55,7 @@ function handleEnter() {
 }
 
 function handleLeave() {
-  if (
-    this.classList.contains('logo') ||
-    document.activeElement === background
-  ) {
+  if (this.classList.contains('logo')) {
     return;
   }
   this.classList.remove('trigger-enter', 'trigger-enter-active');
