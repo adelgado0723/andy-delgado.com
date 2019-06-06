@@ -4,15 +4,17 @@ const nav = document.querySelector('.top');
 const arrow = background.querySelector('.arrow');
 
 let topOfNav = nav.offsetTop;
+// console.log(`Top of Nav = ${topOfNav}`);
 
 function fixNav() {
+  // console.log(window.scrollY);
   if (window.scrollY >= topOfNav) {
     document.body.style.paddingTop = nav.offsetHeight + 'px';
     document.body.classList.add('fixed-nav');
-    // closeDropdown();
+    closeDropdown();
   } else {
     document.body.classList.remove('fixed-nav');
-    // closeDropdown();
+    closeDropdown();
     document.body.style.paddingTop = 0;
   }
 }
@@ -61,17 +63,31 @@ function handleLeave() {
   this.classList.remove('trigger-enter', 'trigger-enter-active');
   background.classList.remove('open');
 }
+function openDropdown(indeces) {
+  indeces.forEach((index) => {
+    triggers[index].classList. 
+  });
+}
 
-function closeDropdown() {
-  triggers.forEach((trigger) => {
+function closeDropdown(indeces) {
+  triggers.forEach((trigger, index) => {
     if (trigger.classList.contains('trigger-enter')) {
       trigger.classList.remove('trigger-enter');
+      if (!indeces.includes(index)) {
+        indeces.push_back(index);
+      }
     }
     if (trigger.classList.contains('trigger-enter-active')) {
       trigger.classList.remove('trigger-enter-active');
+      if (!indeces.includes(index)) {
+        indeces.push_back(index);
+      }
     }
     if (trigger.classList.contains('open')) {
       trigger.classList.remove('open');
+      if (!indeces.includes(index)) {
+        indeces.push_back(index);
+      }
     }
   });
 }
