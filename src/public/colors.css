@@ -1,0 +1,35 @@
+:root {
+    --button-spacing: 10vh;
+    --dark-blue: rgba(18, 47, 65, 1);
+    --dark-dark-blue: rgb(14, 40, 56);
+    --light-dark-blue: rgb(27, 63, 85);
+    --aqua: #068587;
+    --light-blue: rgba(79, 185, 159, 1);
+    --yellow: rgba(242, 177, 52, 1);
+    --dark-yellow: rgb(252, 173, 26);
+    --light-yellow: rgb(245, 194, 100);
+    --red: rgb(219, 68, 41);
+    --rich-black: #000F08;
+    --quartz: #4D4847;
+    --mint-cream: #f4fff8;
+    --tangerine: #f18f01;
+    --blue: #048BA8;
+    --pale-cornflower-blue: #AEC5EB;
+    --saffron: #f3b134;
+    --dark-tangerine: #d17e01;
+    --dark-red: rgb(199, 62, 38);
+    --light-red: rgb(233, 83, 56);
+    --light-tangerine: #fca82a;
+    --black: #222;
+    --blue: #011566;
+    --gray: #cdd6dd;
+    --green-hover: #07b3a1;
+    --dark-green: #013440;
+    --dark-green-active: #013440;
+    --dark-green-hover: #036075;
+    --green: #038c7f;
+    --green-active: #027267;
+    --background-gray: #a3bac3;
+    --light-gray: #ecf0f3;
+
+}
