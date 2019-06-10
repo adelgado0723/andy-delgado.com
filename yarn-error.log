@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\ConEmu\ConEmu\Scripts;C:\Program Files\ConEmu;C:\Program Files\ConEmu\ConEmu;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Users\adelg\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\adelg\AppData\Local\Programs\Python\Python37-32\;C:\Users\adelg\AppData\Local\Microsoft\WindowsApps;C:\Users\adelg\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\adelg\AppData\Roaming\npm;C:\Users\adelg\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\adelg\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.15.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\adelg\Documents\sites\andy-delgado.com\node_modules\deasync\bin\win32-x64-node-10\deasync.node'
+
+npm manifest: 
+  {
+    "name": "Andy-Delgado.com",
+    "version": "1.0.0",
+    "description": "My website featuring projects that I have worked on",
+    "main": "code.js",
+    "scripts": {
+      "start": "run-script-os",
+      "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+      "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+      "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
+      "format": "./node_modules/.bin/prettier --write \"./src/**/*.{js,jsx}\"",
+      "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
+      "dev": "parcel ./src/index.html"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/adelgado0723/andy-delgado.com.git"
+    },
+    "keywords": [
+      "javascript"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/adelgado0723/andy-delgado.com/issues"
+    },
+    "homepage": "https://github.com/adelgado0723/andy-delgado.com#readme",
+    "devDependencies": {
+      "babel-eslint": "^9.0.0",
+      "browser-sync": "^2.26.7",
+      "eslint": "^5.14.1",
+      "eslint-config-prettier": "^4.1.0",
+      "eslint-plugin-html": "^5.0.3",
+      "eslint-plugin-import": "^2.16.0",
+      "eslint-plugin-jsx-a11y": "^6.2.1",
+      "eslint-plugin-prettier": "^3.0.1",
+      "prettier": "^1.16.4",
+      "run-script-os": "^1.0.3"
+    },
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "dotenv": "^8.0.0",
+      "express": "^4.17.1",
+      "nodemailer": "^6.2.1",
+      "normalize.css": "^8.0.1",
+      "parcel": "^1.12.3",
+      "style.css": "^1.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
