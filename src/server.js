@@ -48,9 +48,12 @@ app.post(
       to: process.env.GMAIL_USR,
       subject: 'New message from contact form at andy-delgado.com',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`,
+      // textEncoding: 'UTF-8',
     };
     smtpTrans.sendMail(mailOpts, function(error, response) {
+      // console.log(response);
       if (error) {
+        console.log(error);
         res.end('contact-failure');
       } else {
         res.end('contact-success');
