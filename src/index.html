@@ -4,13 +4,54 @@
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans&display=swap"
     />
     <link rel="stylesheet" href="./public/style.css" />
     <title>Andy-Delgado.com</title>
   </head>
 
   <body>
+    <!-- Modal -->
+    <div class="gallery-modal toggle-content">
+      <div class="gallery-modal-body">
+        <i class="fa fa-remove fa-2x modal-close"></i>
+        <div class="project-content">
+          <h1 class="project-name">Not Rendered</h1>
+          <div class="modal-items">
+            <div class="carousel">
+              <img class="active-large" alt="" src="" />
+              <div class="carousel-smaller"></div>
+            </div>
+            <div class="info-container">
+              <!-- <div class="info-top"> -->
+              <div class="summary-container">
+                <h2>Description</h2>
+                <div class="summary"></div>
+              </div>
+              <div class="technologies-container">
+                <h2>Technologies</h2>
+                <div class="technologies"></div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="project-buttons">
+            <form class="src-form">
+              <button class="button src-button" type="submit">
+                View Source
+              </button>
+            </form>
+            <form class="demo-form">
+              <button class="button demo-button" type="submit">
+                Live Demo
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Front Page -->
     <header class="banner">
       <h1 class="title">
         Hello, my name is <span class="title-highlight">Andy Delgado</span> and
@@ -100,47 +141,14 @@
     <section>
       <div class="site-wrap project-section">
         <h1 class="section-header title-highlight">Projects</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-          tempora rerum, est autem cupiditate, corporis a qui libero ipsum
-          delectus quidem dolor at nulla, adipisci veniam in reiciendis aut
-          asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in
-          aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut,
-          dignissimos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-          tempora rerum, est autem cupiditate, corporis a qui libero ipsum
-          delectus quidem dolor at nulla, adipisci veniam in reiciendis aut
-          asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in
-          aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut,
-          dignissimos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-          tempora rerum, est autem cupiditate, corporis a qui libero ipsum
-          delectus quidem dolor at nulla, adipisci veniam in reiciendis aut
-          asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in
-          aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut,
-          dignissimos.
-        </p>
-
-        <img src="http://unsplash.it/400/400" class="align-left slide-in" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-          tempora rerum, est autem cupiditate, corporis a qui libero ipsum
-          delectus quidem dolor at nulla, adipisci veniam in reiciendis aut
-          asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in
-          aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut,
-          dignissimos.
-        </p>
+        <div class="gallery-container"></div>
       </div>
     </section>
     <section>
       <div class="site-wrap">
         <h1 class="section-header title-highlight">Say Hello</h1>
-        <form action="/contact" class="contact-form" method="post" role="form">
-          <fieldset class="contact-text-inputs">
+        <form action="/contact" class="contact-form" method="post">
+          <div class="contact-text-inputs">
             <label for="name" class="input-label">Name: &#42;</label>
             <input
               type="text"
@@ -171,17 +179,21 @@
               tabindex="4"
               required
             ></textarea>
-            <button
-              type="submit"
-              name="submit"
-              class="form-submit contact-button"
-            >
-              Submit
-            </button>
-          </fieldset>
+          </div>
+          <button
+            type="submit"
+            name="submit"
+            class="form-submit contact-button"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </section>
   </body>
-  <script src="./public/Nav.js"></script>
+  <script type="text/javascript" src="./public/projects.json"></script>
+  <script src="https://use.fontawesome.com/934d09d5de.js"></script>
+  <script src="./public/load_projects.js"></script>
+  <script src="./public/nav.js"></script>
+  <!-- <script src="./public/projects.js" type="module"></script> -->
 </html>

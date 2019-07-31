@@ -10,7 +10,8 @@
     "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
     "format": "./node_modules/.bin/prettier --write \"./src/**/*.{js,jsx}\"",
     "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
-    "dev": "parcel ./src/index.html"
+    "dev": "parcel ./src/index.html",
+    "server": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -34,8 +35,10 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
+    "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
-    "run-script-os": "^1.0.7"
+    "run-script-os": "^1.0.7",
+    "sass": "^1.22.9"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

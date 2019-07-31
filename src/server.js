@@ -29,7 +29,7 @@ app.post(
       .escape(),
   ],
   (req, res) => {
-    console.log(req.body.name, req.body.email, req.body.message);
+    // console.log(req.body.name, req.body.email, req.body.message);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });

@@ -1,13 +1,13 @@
-@import url("./colors.css");
-@import url("./ContactForm.css");
-@import url("./nav.css");
+@import url('./colors.css');
+@import url('./contact_form.css');
+@import url('./nav.css');
+@import url('./projects.css');
 
 @font-face {
   font-family: 'Cast Iron';
-  src: url('./CastIron-Condensed.otf') format('opentype');
+  src: url('./castIron-condensed.otf') format('opentype');
   font-family: 'Luckiest Guy';
   src: url('./luckiestguy.ttf') format('truetype');
-
 }
 
 html {
@@ -31,7 +31,6 @@ body {
 }
 
 .banner {
-
   /* top: 0; */
   height: 100vh;
   text-align: center;
@@ -46,7 +45,6 @@ body {
 }
 
 h1 {
-
   font-family: 'Luckiest Guy', cursive;
 }
 
@@ -64,65 +62,12 @@ h1 {
   text-align: left;
   max-width: 75vw;
   justify-self: left;
-
-
 }
 
 .title-highlight {
-
   text-shadow: 6px 6px 0 var(--dark-blue);
   color: var(--tangerine);
 }
-
-.contact-button {
-  justify-self: center;
-  align-self: center;
-  padding: 10px 15px;
-  /* margin: 10px 0px; */
-  border: none;
-  background-color: var(--red);
-  font-weight: bold;
-  font-size: 2.5em;
-  font-family: 'Luckiest Guy';
-  text-shadow: 3px 3px 0 var(--dark-blue);
-  border: 5px solid var(--dark-blue);
-  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
-    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: var(--tangerine);
-  text-shadow: 2px 2px 0 var(--dark-blue);
-  border-radius: 5px;
-}
-
-.contact-button:active {
-  background-color: var(--dark-red);
-  text-shadow: 3px 3px 0 var(--dark-dark-blue);
-  border: 5px solid var(--dark-dark-blue);
-  color: var(--dark-tangerine);
-  text-shadow: 2px 2px 0 var(--dark-dark-blue);
-}
-
-.contact-button:disabled:hover,
-.contact-button:disabled:active,
-.contact-button:disabled {
-  opacity: .80;
-  background-color: var(--dark-red);
-  text-shadow: 3px 3px 0 var(--dark-dark-blue);
-  border: 5px solid var(--dark-dark-blue);
-  color: var(--dark-tangerine);
-  text-shadow: 2px 2px 0 var(--dark-dark-blue);
-
-
-}
-
-.contact-button:hover {
-  background-color: var(--light-red);
-  text-shadow: 3px 3px 0 var(--light-dark-blue);
-  border: 5px solid var(--light-dark-blue);
-  color: var(--light-tangerine);
-  text-shadow: 2px 2px 0 var(--light-dark-blue);
-
-}
-
 
 .site-wrap {
   border-radius: 15px;
@@ -159,7 +104,7 @@ h1 {
   }
 
   .intro-phrase {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
@@ -173,11 +118,11 @@ h1 {
   }
 
   .contact-button {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   .intro-phrase {
-    font-size: .7em;
+    font-size: 0.7em;
   }
 }
 
@@ -192,7 +137,7 @@ h1 {
   }
 
   .contact-button {
-    font-size: .75em;
+    font-size: 0.75em;
     /* text-shadow: var(--dark-blue) 1px 1px; */
     /* border: 2px solid var(--dark-blue); */
   }
@@ -202,6 +147,6 @@ h1 {
   }
 
   .intro-phrase {
-    font-size: .67em;
+    font-size: 0.67em;
   }
 }
