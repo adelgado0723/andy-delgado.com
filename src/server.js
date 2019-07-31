@@ -3,11 +3,12 @@ const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const { check, validationResult } = require('express-validator/check');
+const { check, validationResult } = require('express-validator');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
@@ -26,25 +27,31 @@ app.post(
     check('message')
       .trim()
       .escape(),
+    // sanitizeBody(),
   ],
   (req, res) => {
+    console.log(req.body.name, req.body.email, req.body.message);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
     }
-    console.log(req);
+    // console.log(req);
     let mailOpts, smtpTrans;
     smtpTrans = nodemailer.createTransport({
       host: 'smtp.gmail.com',
+      // service: 'Gmail',
       port: 465,
       secure: true,
       auth: {
         user: process.env.GMAIL_USR,
         pass: process.env.GMAIL_PASS,
+        // user: 'adelgado0723@gmail.com',
+        // pass: 'kqqmskxweszsgbzl',
       },
     });
     mailOpts = {
       from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+      // to: 'adelgado0723@gmail.com',
       to: process.env.GMAIL_USR,
       subject: 'New message from contact form at andy-delgado.com',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`,
