@@ -27,7 +27,6 @@ app.post(
     check('message')
       .trim()
       .escape(),
-    // sanitizeBody(),
   ],
   (req, res) => {
     console.log(req.body.name, req.body.email, req.body.message);
@@ -39,26 +38,20 @@ app.post(
     let mailOpts, smtpTrans;
     smtpTrans = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      // service: 'Gmail',
       port: 465,
       secure: true,
       auth: {
         user: process.env.GMAIL_USR,
         pass: process.env.GMAIL_PASS,
-        // user: 'adelgado0723@gmail.com',
-        // pass: 'kqqmskxweszsgbzl',
       },
     });
     mailOpts = {
       from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-      // to: 'adelgado0723@gmail.com',
       to: process.env.GMAIL_USR,
       subject: 'New message from contact form at andy-delgado.com',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`,
-      // textEncoding: 'UTF-8',
     };
     smtpTrans.sendMail(mailOpts, function(error, response) {
-      // console.log(response);
       if (error) {
         console.log(error);
         res.end('contact-failure');
