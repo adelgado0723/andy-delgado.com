@@ -68,6 +68,12 @@ h1 {
   text-shadow: 6px 6px 0 var(--dark-blue);
   color: var(--tangerine);
 }
+.section-header {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-align: center;
+  font-size: 4em;
+}
 
 .site-wrap {
   border-radius: 15px;

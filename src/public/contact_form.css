@@ -26,13 +26,6 @@
   font-family: 'Roboto Slab';
 }
 
-.section-header {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-  text-align: center;
-  font-size: 4em;
-}
-
 .input-label {
   grid-column: 1/2;
 }
