@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const nav = document.querySelector('.top');
-const navLinks = nav.querySelectorAll('a');
+const navLinks = nav.querySelectorAll('li');
 
 let topOfNav = nav.offsetTop;
 // console.log(`Top of Nav = ${topOfNav}`);
@@ -20,7 +20,7 @@ function fixNav() {
 function scrollToElem(e) {
   // console.log(e);
   e.preventDefault();
-  const href = this.getAttribute('href');
+  const href = this.querySelector('a').getAttribute('href');
   const offset = document.querySelector(href).offsetTop;
   // console.log(`Section offsetTop = ${offset}`);
   scrollTo(offset, 500);

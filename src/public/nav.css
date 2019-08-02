@@ -30,7 +30,6 @@ nav ul {
   align-items: center;
   justify-content: center;
   display: flex;
-
   margin: 0;
   /* padding: 0px 5vw; */
 }
@@ -48,6 +47,7 @@ nav ul {
   /* height: 10vh; */
   height: 65px;
   /* transition: all 0.5s; */
+  cursor: pointer;
 }
 
 /* Fixed site nav bar effect */

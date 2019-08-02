@@ -156,7 +156,7 @@
 }
 
 .gallery-modal .gallery-modal-body {
-  background: rgba(122, 122, 122, 0.8);
+  background-image: url("./images/topography.png");
   text-align: center;
   margin: 1%;
   color: papayawhip;
@@ -168,12 +168,13 @@
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   height: 25px;
-  padding: 10px;
+  padding: 10px 25px;
+  color: var(--tangerine);
   text-shadow: 0 5px 8px rgba(50, 50, 93, 0.1), 0 5px 12px rgba(50, 50, 93, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-modal .gallery-modal-body .project-content {
-  background-color: var(--blue);
+  background: var(--background-gray);
   margin: 6vh 6vw;
   padding: 1vh 6vw;
   border-radius: 15px;
@@ -183,7 +184,7 @@
 }
 
 .gallery-modal .gallery-modal-body .project-content .project-name {
-  margin-bottom: 35px;
+  margin-bottom: 55px;
   font-size: 50px;
   text-align: center;
 }
@@ -273,6 +274,8 @@
           align-items: center;
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
+  font-family: 'Open Sans';
+  color: var(--blue);
 }
 
 .gallery-modal .gallery-modal-body .project-content .modal-items .info-container .technologies-container > .technologies {

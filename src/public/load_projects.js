@@ -71,7 +71,7 @@ const projectSummary = document.querySelector('.summary');
 const projectTechnologies = document.querySelector('.technologies');
 const projectSrcForm = document.querySelector('.src-form');
 const projectDemoForm = document.querySelector('.demo-form');
-
+const body = document.querySelector('body');
 // const fadingActiveImage = document.querySelector('.fading');
 
 function fadeImage(imageURL) {
@@ -156,6 +156,8 @@ Data.projects.forEach(function loadProjects(project) {
       smallCarouselImages.appendChild(image);
     });
 
+    body.style.overflowY = 'hidden';
+
     galleryModal.classList.add('is-visible');
     function makeTechList(tech) {
       return `<span>${tech}</span>`;
@@ -165,4 +167,5 @@ Data.projects.forEach(function loadProjects(project) {
 
 modalClose.addEventListener('click', function addCloseButtonListener() {
   galleryModal.classList.remove('is-visible');
+  body.style.overflowY = 'scroll';
 });

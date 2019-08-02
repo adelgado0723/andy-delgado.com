@@ -158,7 +158,9 @@ $transition: all ease-in 400ms;
   overflow-y: scroll;
 
   .gallery-modal-body {
-    background: rgba(122, 122, 122, 0.8);
+    // background: rgba(122, 122, 122, 0.8);
+    // background-color: var(--aqua);
+    background-image: url('./images/topography.png');
     text-align: center;
     // font-family: 'Vollkorn';
     margin: 1%;
@@ -169,15 +171,18 @@ $transition: all ease-in 400ms;
       cursor: pointer;
       transition: all 500ms ease-in-out;
       height: 25px;
-      padding: 10px;
-
+      padding: 10px 25px;
+      color: var(--tangerine);
+      // color: #333;
       text-shadow: 0 5px 8px rgba(50, 50, 93, 0.1),
         0 5px 12px rgba(50, 50, 93, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .project-content {
       // background: #406997;
-      background-color: var(--blue);
+      // background-color: var(--blue);
+      background: var(--background-gray);
+
       margin: 6vh 6vw;
       padding: 1vh 6vw;
       border-radius: 15px;
@@ -188,7 +193,7 @@ $transition: all ease-in 400ms;
       // grid-template-rows: auto auto auto;
 
       .project-name {
-        margin-bottom: 35px;
+        margin-bottom: 55px;
         font-size: 50px;
         text-align: center;
       }
@@ -267,6 +272,8 @@ $transition: all ease-in 400ms;
           align-items: center;
           grid-template-rows: 1fr auto;
           // margin-bottom: 10px;
+          font-family: 'Open Sans';
+          color: var(--blue);
 
           .technologies-container > .technologies {
             background-color: whitesmoke;
