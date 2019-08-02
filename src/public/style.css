@@ -28,6 +28,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background: rgba(245, 245, 245, 1);
+  margin-bottom: 200px;
 }
 
 .banner {
@@ -69,8 +70,7 @@ h1 {
   color: var(--tangerine);
 }
 .section-header {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin: 0;
   text-align: center;
   font-size: 4em;
 }
@@ -78,7 +78,7 @@ h1 {
 .site-wrap {
   border-radius: 15px;
   max-width: 75vw;
-  margin: 30px auto;
+  margin: 75px auto;
   background: var(--background-gray);
   padding: 40px;
   text-align: justify;
@@ -95,7 +95,11 @@ h1 {
   align-self: center;
   margin: 30px;
 }
-
+#AboutMe {
+  height: 80vh;
+  align-content: start;
+  justify-content: center;
+}
 @media screen and (max-width: 992px) {
   .icon {
     width: 100px;
