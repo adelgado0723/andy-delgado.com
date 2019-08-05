@@ -63,7 +63,7 @@ const Data = {
 
 const modalClose = document.querySelector('.modal-close');
 const galleryContainer = document.querySelector('.gallery-container');
-const galleryModal = document.querySelector('.gallery-modal');
+const galleryModalBody = document.querySelector('.gallery-modal-body');
 const projectName = document.querySelector('.project-name');
 const smallCarouselImages = document.querySelector('.carousel-smaller');
 const activeCarouselImage = document.querySelector('.active-large');
@@ -158,7 +158,7 @@ Data.projects.forEach(function loadProjects(project) {
 
     body.style.overflowY = 'hidden';
 
-    galleryModal.classList.add('is-visible');
+    galleryModalBody.classList.add('is-visible');
     function makeTechList(tech) {
       return `<span>${tech}</span>`;
     }
@@ -166,6 +166,6 @@ Data.projects.forEach(function loadProjects(project) {
 });
 
 modalClose.addEventListener('click', function addCloseButtonListener() {
-  galleryModal.classList.remove('is-visible');
+  galleryModalBody.classList.remove('is-visible');
   body.style.overflowY = 'scroll';
 });

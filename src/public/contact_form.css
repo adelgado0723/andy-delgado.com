@@ -13,8 +13,8 @@
   text-align: left;
   font-size: 1.5em;
   font-weight: bold;
-  padding: 4vh 0;
-  margin-bottom: 0vh;
+  /* padding: 4vh 0; */
+  margin-bottom: 60px;
 }
 
 .text-input {
@@ -35,47 +35,43 @@
 }
 
 .contact-button {
+  background-color: var(--light-red);
+  border: 5px solid var(--light-dark-blue);
+  color: var(--light-tangerine);
+  text-shadow: 2px 2px 0 var(--light-dark-blue);
   justify-self: center;
   align-self: center;
   padding: 10px 15px;
   /* margin: 10px 0px; */
-  border: none;
-  background-color: var(--red);
+  /* border: none; */
   font-weight: bold;
   font-size: 2.5em;
   font-family: 'Luckiest Guy';
-  text-shadow: 3px 3px 0 var(--dark-blue);
-  border: 5px solid var(--dark-blue);
-  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
-    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: var(--tangerine);
-  text-shadow: 2px 2px 0 var(--dark-blue);
   border-radius: 5px;
+  transition: box-shadow ease-in 201ms;
 }
 
 .contact-button:active {
   background-color: var(--dark-red);
-  text-shadow: 3px 3px 0 var(--dark-dark-blue);
   border: 5px solid var(--dark-dark-blue);
   color: var(--dark-tangerine);
   text-shadow: 2px 2px 0 var(--dark-dark-blue);
 }
 
-.contact-button:disabled:hover,
-.contact-button:disabled:active,
+/* .contact-button:disabled:hover, */
 .contact-button:disabled {
   opacity: 0.8;
   background-color: var(--dark-red);
-  text-shadow: 3px 3px 0 var(--dark-dark-blue);
   border: 5px solid var(--dark-dark-blue);
   color: var(--dark-tangerine);
   text-shadow: 2px 2px 0 var(--dark-dark-blue);
 }
 
 .contact-button:hover {
-  background-color: var(--light-red);
-  text-shadow: 3px 3px 0 var(--light-dark-blue);
-  border: 5px solid var(--light-dark-blue);
-  color: var(--light-tangerine);
-  text-shadow: 2px 2px 0 var(--light-dark-blue);
+  background-color: var(--red);
+  border: 5px solid var(--dark-blue);
+  color: var(--tangerine);
+  text-shadow: 2px 2px 0 var(--dark-blue);
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
 }
