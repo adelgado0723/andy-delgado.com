@@ -162,7 +162,7 @@ $transition: all ease-in 400ms;
   top: 0;
   left: 0;
 
-  max-height: 100vh;
+  min-height: 100vh;
   overflow-y: scroll;
   // background: rgba(122, 122, 122, 0.8);
   // background-color: var(--aqua);
