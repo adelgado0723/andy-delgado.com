@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Cast Iron';
-  src: url('./castIron-condensed.otf') format('opentype');
+  src: url('./CastIron-Condensed.otf') format('opentype');
   font-family: 'Luckiest Guy';
   src: url('./luckiestguy.ttf') format('truetype');
 }
@@ -69,6 +69,7 @@ h1 {
   text-shadow: 6px 6px 0 var(--dark-blue);
   color: var(--tangerine);
 }
+
 .section-header {
   margin: 0;
   text-align: center;
@@ -96,6 +97,7 @@ h1 {
   align-self: center;
   /* margin: 30px; */
 }
+
 /* #AboutMe {
   height: 80vh;
   align-content: start;
@@ -112,6 +114,7 @@ h1 {
   justify-items: center;
   align-content: center;
 }
+
 .about-me-container img {
   width: 18vw;
   border-radius: 5px;
@@ -120,6 +123,7 @@ h1 {
 
   height: auto;
 }
+
 @media screen and (max-width: 992px) {
   .icon {
     width: 100px;
